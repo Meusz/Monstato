@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Player Character - Red Mage -->
+  <!-- Head -->
+  <rect x="12" y="4" width="8" height="8" fill="#e74c3c"/>
+  <rect x="10" y="6" width="12" height="4" fill="#e74c3c"/>
+  <!-- Eyes -->
+  <rect x="13" y="6" width="2" height="2" fill="white"/>
+  <rect x="17" y="6" width="2" height="2" fill="white"/>
+  <rect x="14" y="7" width="1" height="1" fill="#c0392b"/>
+  <rect x="18" y="7" width="1" height="1" fill="#c0392b"/>
+  <!-- Hat -->
+  <rect x="10" y="2" width="12" height="4" fill="#c0392b"/>
+  <rect x="14" y="0" width="4" height="4" fill="#c0392b"/>
+  <!-- Body -->
+  <rect x="10" y="12" width="12" height="10" fill="#c0392b"/>
+  <rect x="8" y="14" width="16" height="6" fill="#c0392b"/>
+  <!-- Robe details -->
+  <rect x="12" y="14" width="8" height="8" fill="#922b21"/>
+  <!-- Arms -->
+  <rect x="6" y="14" width="4" height="4" fill="#e74c3c"/>
+  <rect x="22" y="14" width="4" height="4" fill="#e74c3c"/>
+  <!-- Staff -->
+  <rect x="24" y="8" width="2" height="16" fill="#8b4513"/>
+  <circle cx="25" cy="8" r="3" fill="#f1c40f"/>
+  <!-- Legs -->
+  <rect x="10" y="22" width="4" height="6" fill="#922b21"/>
+  <rect x="18" y="22" width="4" height="6" fill="#922b21"/>
+  <!-- Feet -->
+  <rect x="8" y="28" width="6" height="2" fill="#922b21"/>
+  <rect x="18" y="28" width="6" height="2" fill="#922b21"/>
+</svg>

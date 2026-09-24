@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://rewarded_ad_panel_scene"]
+
+[ext_resource type="Script" path="res://ui/rewarded_ad/rewarded_ad_panel.gd" id="1_script"]
+
+[node name="RewardedAdPanel" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_script")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+color = Color(0, 0, 0, 0.65)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -120.0
+offset_right = 180.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Revive with Ad?"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 24
+
+[node name="BodyLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Watch a short ad to continue your run!"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+
+[node name="WatchButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 44)
+size_flags_horizontal = 4
+text = "Watch Ad"
+
+[node name="SkipButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 40)
+size_flags_horizontal = 4
+text = "No Thanks"

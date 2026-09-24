@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Player Character - Purple Tank -->
+  <!-- Head -->
+  <rect x="11" y="4" width="10" height="8" fill="#9b59b6"/>
+  <rect x="9" y="6" width="14" height="4" fill="#9b59b6"/>
+  <!-- Eyes -->
+  <rect x="13" y="6" width="2" height="2" fill="white"/>
+  <rect x="17" y="6" width="2" height="2" fill="white"/>
+  <rect x="14" y="7" width="1" height="1" fill="#8e44ad"/>
+  <rect x="18" y="7" width="1" height="1" fill="#8e44ad"/>
+  <!-- Body -->
+  <rect x="8" y="12" width="16" height="12" fill="#8e44ad"/>
+  <rect x="6" y="14" width="20" height="8" fill="#8e44ad"/>
+  <!-- Arms -->
+  <rect x="4" y="14" width="4" height="6" fill="#9b59b6"/>
+  <rect x="24" y="14" width="4" height="6" fill="#9b59b6"/>
+  <!-- Legs -->
+  <rect x="10" y="24" width="5" height="4" fill="#7d3c98"/>
+  <rect x="17" y="24" width="5" height="4" fill="#7d3c98"/>
+  <!-- Feet -->
+  <rect x="8" y="28" width="7" height="2" fill="#7d3c98"/>
+  <rect x="17" y="28" width="7" height="2" fill="#7d3c98"/>
+  <!-- Armor plates -->
+  <rect x="10" y="14" width="12" height="4" fill="#a569bd"/>
+  <rect x="12" y="20" width="8" height="2" fill="#a569bd"/>
+</svg>

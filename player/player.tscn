@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://player_scene"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://player/player_movement.gd" id="2_movement"]
+[ext_resource type="Script" path="res://player/player_combat.gd" id="3_combat"]
+[ext_resource type="Script" path="res://player/player_stats.gd" id="4_stats"]
+[ext_resource type="Script" path="res://player/player_animations.gd" id="5_animations"]
+[ext_resource type="Script" path="res://player/player_input.gd" id="6_input"]
+[ext_resource type="Script" path="res://player/dash_ability.gd" id="7_dash"]
+[ext_resource type="Script" path="res://player/trainer_ability.gd" id="8_trainer_ability"]
+[ext_resource type="Script" path="res://shared/components/health_component.gd" id="9_health"]
+[ext_resource type="Script" path="res://shared/components/knockback_component.gd" id="10_knockback"]
+[ext_resource type="Script" path="res://shared/components/hurtbox_component.gd" id="11_hurtbox"]
+[ext_resource type="Script" path="res://shared/components/hitbox_component.gd" id="12_hitbox"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 12.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurtbox"]
+size = Vector2(24, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(20, 20)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_body")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.6, 1, 1)
+
+[node name="PlayerMovement" type="Node" parent="."]
+script = ExtResource("2_movement")
+
+[node name="PlayerCombat" type="Node" parent="."]
+script = ExtResource("3_combat")
+
+[node name="PlayerStats" type="Node" parent="."]
+script = ExtResource("4_stats")
+
+[node name="PlayerAnimations" type="Node" parent="."]
+script = ExtResource("5_animations")
+
+[node name="PlayerInput" type="Node" parent="."]
+script = ExtResource("6_input")
+
+[node name="DashAbility" type="Node" parent="."]
+script = ExtResource("7_dash")
+
+[node name="TrainerAbility" type="Node" parent="."]
+script = ExtResource("8_trainer_ability")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("9_health")
+
+[node name="KnockbackComponent" type="Node" parent="."]
+script = ExtResource("10_knockback")
+
+[node name="HurtboxComponent" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("11_hurtbox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+shape = SubResource("RectangleShape2D_hurtbox")
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("12_hitbox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("RectangleShape2D_hitbox")
+
+[node name="WeaponPivot" type="Node2D" parent="."]

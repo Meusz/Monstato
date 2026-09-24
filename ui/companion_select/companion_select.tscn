@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://companion_select_scene"]
+
+[ext_resource type="Script" path="res://ui/companion_select/companion_select.gd" id="1_script"]
+
+[node name="CompanionSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.08, 0.1, 0.14, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = -40.0
+offset_bottom = -30.0
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "CHOOSE YOUR STARTING COMPANION"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="HSep" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CompanionsGrid" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 5
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10

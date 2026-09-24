@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://hud_scene"]
+
+[ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_script"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CooldownsSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="DashCooldownBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/CooldownsSection"]
+custom_minimum_size = Vector2(150, 16)
+layout_mode = 2
+max_value = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="DashLabel" type="Label" parent="MarginContainer/VBoxContainer/CooldownsSection/DashCooldownBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AbilityCooldownBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/CooldownsSection"]
+custom_minimum_size = Vector2(150, 16)
+layout_mode = 2
+max_value = 8.0
+value = 8.0
+show_percentage = false
+
+[node name="AbilityLabel" type="Label" parent="MarginContainer/VBoxContainer/CooldownsSection/AbilityCooldownBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar/HealthBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="XPBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+max_value = 100.0
+value = 0.0
+show_percentage = false
+
+[node name="XPLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar/XPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Wave: 1"
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "01:00"
+
+[node name="CurrencyLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "$0"
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Lv.1"
+
+[node name="EnemyCountLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Enemies: 0"

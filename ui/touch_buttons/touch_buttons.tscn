@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://ui/touch_buttons/touch_buttons.gd" id="1_tbtn"]
+
+[node name="TouchButtons" type="Control"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_tbtn")
+
+[node name="DashButton" type="ColorRect" parent="."]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -130.0
+offset_top = -130.0
+offset_right = -10.0
+offset_bottom = -10.0
+color = Color(0.8, 0.2, 0.2, 0.55)
+
+[node name="Label" type="Label" parent="DashButton"]
+layout_mode = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -8.0
+offset_right = 30.0
+offset_bottom = 8.0
+modulate = Color(1, 1, 1, 1)
+
+[node name="AbilityButton" type="ColorRect" parent="."]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -60.0
+offset_top = -250.0
+offset_right = 60.0
+offset_bottom = -130.0
+color = Color(0.2, 0.3, 0.8, 0.55)
+
+[node name="Label" type="Label" parent="AbilityButton"]
+layout_mode = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -8.0
+offset_right = 30.0
+offset_bottom = 8.0
+modulate = Color(1, 1, 1, 1)

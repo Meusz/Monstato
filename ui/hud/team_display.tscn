@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://team_display_scene"]
+
+[ext_resource type="Script" path="res://ui/hud/team_display.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_team_panel"]
+bg_color = Color(0.1, 0.1, 0.15, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.4, 0.5, 0.7)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+
+[node name="TeamDisplay" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -220.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_team_panel")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="DeployedSection" type="VBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PanelContainer/VBox/DeployedSection"]
+layout_mode = 2
+text = "DEPLOYED (0/3)"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 12
+
+[node name="DeployedHBox" type="HBoxContainer" parent="PanelContainer/VBox/DeployedSection"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="ReserveSection" type="VBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PanelContainer/VBox/ReserveSection"]
+layout_mode = 2
+text = "RESERVE (0/3)"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 12
+
+[node name="ReserveHBox" type="HBoxContainer" parent="PanelContainer/VBox/ReserveSection"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1

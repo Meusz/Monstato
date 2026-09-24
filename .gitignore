@@ -1,0 +1,33 @@
+# Godot 4 specific
+.godot/
+*.import
+export_presets.cfg
+
+# Imported resources
+*.translation
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Builds
+builds/
+export/
+*.exe
+*.x86_64
+*.apk
+*.pck
+
+# Godot debug
+*.tmp
+*.log
+
+# Crash reports
+crash_*.txt

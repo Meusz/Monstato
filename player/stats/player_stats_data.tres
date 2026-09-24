@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="PlayerStatsData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://player/stats/player_stats_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+character_name = "Default"
+description = "A balanced starter character."
+max_health = 100.0
+armor = 0.0
+speed = 200.0
+regeneration = 0.0
+luck = 0.0
+damage = 10.0
+crit_chance = 0.05
+crit_multiplier = 2.0
+attack_speed = 1.0
+range = 150.0
+projectile_count = 1
+knockback_force = 100.0
+pickup_range = 50.0
+xp_bonus = 0.0
+gold_bonus = 0.0
+starting_weapons = ["pistol"]
+starting_items = []

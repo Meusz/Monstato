@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Laser Weapon -->
+  <rect x="4" y="12" width="18" height="6" fill="#2980b9"/>
+  <rect x="20" y="10" width="6" height="10" fill="#3498db"/>
+  <circle cx="24" cy="14" r="3" fill="#1abc9c"/>
+  <circle cx="24" cy="14" r="1.5" fill="#16a085"/>
+  <rect x="6" y="18" width="4" height="4" fill="#1a5276"/>
+  <rect x="22" y="12" width="2" height="4" fill="#2ecc71"/>
+</svg>

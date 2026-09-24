@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://arena_scene_v2"]
+
+[ext_resource type="Script" path="res://maps/arena/arena.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://player_scene" path="res://player/player.tscn" id="2_player"]
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(600, 450)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(600, 450)
+zoom = Vector2(1, 1)
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
